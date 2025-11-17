@@ -48,14 +48,14 @@ class Controlador:
             self.vista.enviar(self.bot, chat_id, logs)
 
         elif comando == "/estado":
-            self.vista.enviar(self.bot, chat_id, "📡 Sistema funcionando correctamente.")
+            self.vista.enviar(self.bot, chat_id, "Sistema funcionando correctamente.")
 
         elif comando == "/salir":
             GPIO.cleanup()
-            self.vista.enviar(self.bot, chat_id, "👋 Sistema apagado.")
+            self.vista.enviar(self.bot, chat_id, "Sistema apagado.")
 
         else:
-            self.vista.enviar(self.bot, chat_id, "❌ Comando no reconocido.")
+            self.vista.enviar(self.bot, chat_id, "Comando no reconocido.")
 
 
 TOKEN = "8513640504:AAGJAzWpp5K6Ec8uw_4K8Nvyw9EjgEK5E1g"
@@ -64,7 +64,7 @@ controlador = Controlador(bot)
 
 MessageLoop(bot, controlador.manejar_mensaje).run_as_thread()
 
-print("🤖 Bot Telegram activo...")
+print("Bot Telegram activo...")
 
 while True:
     time.sleep(10)
